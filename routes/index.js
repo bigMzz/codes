@@ -8,6 +8,7 @@ const fs = require('fs');
 const Database = require('better-sqlite3');
 const _ = require('lodash');
 
+
 let databasePath = appRoot + '/config/' + config.sqlite_file_name;
 
 if (!fs.existsSync(databasePath)) {
