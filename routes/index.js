@@ -90,7 +90,7 @@ router.get('/', function(req, res, next) {
     totalPunkCountQueryValue['punk_id'] = '%'+search+'%';
 
     punksQuery = punksQuery+' WHERE punks.id LIKE :punk_id ';
-    punksQueryValue['punk_id'] = '%'+search+'%' - 1;
+    punksQueryValue['punk_id'] = '%'+search+'%';
   } else {
     totalPunkCount = totalPunkCount;
   }
