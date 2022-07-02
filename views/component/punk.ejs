@@ -18,7 +18,7 @@ if (trait_normalization == 1) {
     <img class="punk-avatar" style="<% if (content_image_frame=='rectangle') { %> border-radius: 10px; <% } %>" src="<%= punk.image.replace('ipfs://', 'https://ipfs.io/ipfs/'); %>" alt="<%= punk.name %>" />
     <% } %>
     <div class="punk-info text-center">
-      <span><%= punk.name.substring(0, punk.name.lastIndexOf(' ')) %></span>
+      <span><%= punk.name %></span>
      
     </div>
   </div>
