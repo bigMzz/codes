@@ -5,7 +5,7 @@ const config = {
     collection_contract_address: '0xA2b49b38f74046A9c5f7A92D0C5635DbF8342852',
     collection_name: 'Colored Florks by Florkinomics',
     collection_description: 'Colored Florks',
-    collection_id_from: 0,
+    collection_id_from: 1,
     ignore_traits: ['date'], 
     sqlite_file_name: 'database.sqlite',
     ga: 'G-BW69Z04YTP',
