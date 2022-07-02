@@ -8,7 +8,7 @@ const config = {
     collection_id_from: 1,
     ignore_traits: ['date'], 
     sqlite_file_name: 'database.sqlite',
-    ga: 'G-BW69Z04YTP',
+    ga: 'G-BW69Z04Y12',
     main_og_image: 'https://www.florkinomics.com/assets/logo.png',
     item_path_name: 'cflorks',
     page_item_num: 120,
