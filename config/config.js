@@ -10,7 +10,7 @@ const config = {
     sqlite_file_name: 'database.sqlite',
     ga: 'G-BW69Z04YTP',
     main_og_image: 'https://www.florkinomics.com/assets/logo.png',
-    item_path_name: 'flork',
+    item_path_name: 'cflorks',
     page_item_num: 120,
     content_image_is_video: false,
     content_image_frame: 'rectangle', // circle, rectangle
