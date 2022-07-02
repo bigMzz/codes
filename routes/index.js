@@ -87,12 +87,10 @@ router.get('/', function(req, res, next) {
   if (!_.isEmpty(search)) {
     search = parseInt(search);
     totalPunkCountQuery = totalPunkCountQuery+' WHERE punks.id LIKE :punk_id ';
-    totalPunkCountQueryValue['punk_id'] = '%'+search+'%';
-totalPunkCountQueryValue['punk_id'] = totalPunkCountQueryValue['punk_id'] -1;
+    totalPunkCountQueryValue['punk_id'] = search - 1;
     
     punksQuery = punksQuery+' WHERE punks.id LIKE :punk_id ';
-    punksQueryValue['punk_id'] = '%'+search+'%';
-     punksQueryValue['punk_id']  =  punksQueryValue['punk_id']  - 1 ;
+    punksQueryValue['punk_id'] = search - 1;
   } else {
     totalPunkCount = totalPunkCount;
   }
