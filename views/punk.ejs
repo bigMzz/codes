@@ -34,7 +34,39 @@
                   <%- md.render(punk.description) %>
                 </div>
                 -->
-                
+                 <% if (!_.isEmpty(collection_contract_address)) { %>
+                  <div class="view-on-block text-center">
+                   
+                  </div>
+                <% } %>
+                <% if (!_.isEmpty(punk.external_url)) { %>
+                  <div class="view-on-block text-center">
+                   
+                  </div>
+                <% } %>
+                <%
+                let jsonUrl = punk.id+'/json';
+                if (trait_normalization == 1) {
+                  jsonUrl = jsonUrl+'?trait_normalization=1';
+                }
+                let similarUrl = punk.id+'/similar';
+                if (trait_normalization == 1) {
+                  similarUrl = similarUrl+'?trait_normalization=1';
+                }
+                %>
+                <div class="row">
+                  <div class="col-6" style="padding-right: 5px;">
+                      <div class="view-on-block text-center">
+                        
+                      </div>
+                   
+                  </div>
+                  <div class="col-6" style="padding-left: 5px;">
+                      <div class="view-on-block text-center">
+                      </div>
+                  </div>
+                  
+                  
               
               
                 </div>
