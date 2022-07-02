@@ -19,7 +19,7 @@ const db = new Database(databasePath);
 
 /* GET punks listing. */
 router.get('/:id', function(req, res, next) {
-  let punkId = req.params.id;
+  let punkId = req.params.id -1;
   let useTraitNormalization = req.query.trait_normalization;
 
   let scoreTable = 'punk_scores';
@@ -93,9 +93,10 @@ router.get('/:id', function(req, res, next) {
 });
 
 router.get('/:id/json', function(req, res, next) {
-  let punkId = req.params.id;
+  let punkId = req.params.id -1;
   let useTraitNormalization = req.query.trait_normalization;
 
+    
   let scoreTable = 'punk_scores';
   if (useTraitNormalization == '1') {
     useTraitNormalization = '1';
