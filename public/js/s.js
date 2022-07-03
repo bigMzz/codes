@@ -18,13 +18,17 @@ async function init(tokenid) {
 
     
 try {
-    const owner = await contract.methods.ownerOf(tokenid).call();
+    const owner = await contract.methods.ownerOf(tokenid).call().catch( error => {
+        $("#isminted").text('Not Minted Yet!!');
+       exit;
+        });
 //alert(owner);
 $("#isminted").text('Minted!!');
 
     
 } catch (error) {
-    $("#isminted").text('Not Minted Yet!!');
+    //alert('error2');
+   //
 
 }
 
@@ -44,6 +48,7 @@ $("#isminted").text('Minted!!');
     };
     
 }
+
 
 
 
