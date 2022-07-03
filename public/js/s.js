@@ -12,7 +12,6 @@ let provider;
 
 async function init(tokenid) {
 
-    alert('welcome@');
     web3 = new Web3('https://bsc-dataseed.binance.org/');
     contract = new web3.eth.Contract(abi, contractAddress);
 
