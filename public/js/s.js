@@ -11,17 +11,21 @@ let provider;
 
 
 async function init(tokenid) {
+
+    alert('welcome@');
     web3 = new Web3('https://bsc-dataseed.binance.org/');
     contract = new web3.eth.Contract(abi, contractAddress);
 
     
 try {
     const owner = await contract.methods.ownerOf(tokenid).call();
-alert(owner);
+//alert(owner);
+$("#isminted").text('Minted!!');
 
     
 } catch (error) {
-    alert('no!');
+    $("#isminted").text('Not Minted Yet!!');
+
 }
 
 
@@ -44,23 +48,6 @@ alert(owner);
 
 
 
-jQuery(document).ready(function() {
-    var qsvalue = 0;
-   const params = new Proxy(new URLSearchParams(window.location.search), {
-    get: (searchParams, prop) => searchParams.get(prop),
-  });
-  // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
-  qsvalue = params.tokenid; // "some_value"
-  
-
-
-
-
-    init(qsvalue);
-
-    
- 
-});
 
 
 
