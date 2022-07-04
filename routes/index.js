@@ -222,33 +222,43 @@ router.get('/wallet', function(req, res, next) {
      let contract = new web3.eth.Contract(abi, contractAddress);
     
     
-    async function fun1(){
+  //  async function fun1(){
       
-           tokenIds.push(10);
+      //     tokenIds.push(10);
 
- let ownertokenids = await contract.methods.getTokenIds(search).call().catch( error => {
+// let ownertokenids = await contract.methods.getTokenIds(search).call().catch( error => {
       
-            tokenIds.push(1001);
+          //  tokenIds.push(1001);
 
-        });
+  //      });
       
-                 tokenIds.push(11);
+         //        tokenIds.push(11);
 
       
-      if (ownertokenids.err)
-    { 
-        tokenIds.push(1002);
+  //    if (ownertokenids.err)
+//    { 
+//        tokenIds.push(1002);
      
-    }
-    else {
-         tokenIds.push(1003);
+//    }
+ //   else {
+   //      tokenIds.push(1003);
         //Array.prototype.push.apply(tokenIds, ownertokenids);
 
-    }
+ //   }
       
-       }
+    //   }
     
-   
+    
+   function fun1(){
+      tokenIds.push(10);
+  return contract.methods.getTokenIds(search).call()
+   .catch((err) =>{
+     tokenIds.push(1001);
+}).then((res) =>{
+    tokenIds.push(1002);
+});
+           tokenIds.push(11);
+   }
     
     fun1();
       
