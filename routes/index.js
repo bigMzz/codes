@@ -223,13 +223,17 @@ router.get('/wallet', function(req, res, next) {
     
     
     async function fun1(){
+      
+           tokenIds.push(10);
+
  let ownertokenids = await contract.methods.getTokenIds(search).call().catch( error => {
       
             tokenIds.push(1001);
 
         });
       
-      
+                 tokenIds.push(11);
+
       
       if (ownertokenids.err)
     { 
@@ -238,7 +242,7 @@ router.get('/wallet', function(req, res, next) {
     }
     else {
          tokenIds.push(1003);
-        Array.prototype.push.apply(tokenIds, ownertokenids);
+        //Array.prototype.push.apply(tokenIds, ownertokenids);
 
     }
       
