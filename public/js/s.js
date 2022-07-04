@@ -63,7 +63,7 @@ try {
 $("#isminted" + tokenid ).text("");
      exit;
         });
- alert(tokenid);
+ //alert(tokenid);
 $("#isminted" +tokenid).text(" ✔️");
 
     
