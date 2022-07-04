@@ -230,7 +230,7 @@ router.get('/wallet', function(req, res, next) {
 
         });
       
-       }
+      
       
       if (ownertokenids.err)
     { 
@@ -242,6 +242,8 @@ router.get('/wallet', function(req, res, next) {
         Array.prototype.push.apply(tokenIds, ownertokenids);
 
     }
+      
+       }
     
    
     
