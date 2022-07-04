@@ -226,19 +226,19 @@ router.get('/wallet', function(req, res, next) {
             tokenIds.push(1001);
 
         });
-ownertokenids = JSON.parse(ownertokenids);
      tokenIds.push(1002);
-    
-    
+    Array.prototype.push.apply(tokenIds, ownertokenids);
+         tokenIds.push(1003);
+
     
 
-    let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
-    let result = request('GET', url);
-    let data = result.getBody('utf8');
-    data = JSON.parse(data);
-    data.forEach(element => {
-      tokenIds.push(element.token_id);
-    });
+   // let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
+  //  let result = request('GET', url);
+  //  let data = result.getBody('utf8');
+  //  data = JSON.parse(data);
+  //  data.forEach(element => {
+  //    tokenIds.push(element.token_id);
+ //   });
     if (tokenIds.length > 0) {
       let punksQuery = 'SELECT punks.*, '+scoreTable+'.rarity_rank FROM punks INNER JOIN '+scoreTable+' ON (punks.id = '+scoreTable+'.punk_id) WHERE punks.id IN ('+tokenIds.join(',')+') ORDER BY '+scoreTable+'.rarity_rank ASC';
       punks = db.prepare(punksQuery).all();
