@@ -60,16 +60,16 @@ async function checkmint(tokenid) {
     
 try {
     const owner = await contract.methods.ownerOf(tokenid).call().catch( error => {
-        return false;
-       exit;
+$("#isminted" + tokenid ).text("");
+     exit;
         });
- //alert('yes');
-        return true;
-
+ alert(tokenid);
+$("#isminted" +tokenid).text(" ✔️");
 
     
 } catch (error) {
    
+$("#isminted" + tokenid ).text("");
 
 }
 
