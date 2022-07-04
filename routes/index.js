@@ -246,7 +246,7 @@ router.get('/wallet', function(req, res, next) {
     
    
     
-    
+    fun1();
       
      tokenIds.push(1004);
     
