@@ -212,7 +212,6 @@ router.get('/wallet', function(req, res, next) {
 
   let isAddress = Web3.utils.isAddress(search);
   let tokenIds = [];
-  let ownertokenids [];
   tokenIds.push(1000);
   let punks = null;
   if (isAddress) {
@@ -223,8 +222,8 @@ router.get('/wallet', function(req, res, next) {
      let contract = new web3.eth.Contract(abi, contractAddress);
     
     
-    async function fun1(req, res){
- ownertokenids = contract.methods.getTokenIds(search).call().catch( error => {
+    async function fun1(){
+ let ownertokenids = await contract.methods.getTokenIds(search).call().catch( error => {
       
             tokenIds.push(1001);
 
