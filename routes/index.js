@@ -262,7 +262,7 @@ router.get('/wallet', function(req, res, next) {
     
     fun1();
       
-     tokenIds.push(1004);
+     tokenIds.push(1005);
     
 
    // let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
