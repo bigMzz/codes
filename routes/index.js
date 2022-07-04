@@ -215,6 +215,9 @@ router.get('/wallet', function(req, res, next) {
   tokenIds.push(1000);
   let punks = null;
   if (isAddress) {
+    
+      const web3 = new Web3(new Web3.providers.HttpProvider('https://bsc-dataseed.binance.org/'));
+    alert('ok');
     let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
     let result = request('GET', url);
     let data = result.getBody('utf8');
