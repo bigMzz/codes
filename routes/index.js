@@ -234,13 +234,13 @@ async function runz() {
        tokenIds.push(10);
 
   try {
-    const ownertokenids = await contract.methods.getTokenIds(search).call()
-    .then(
-         tokenIds.push(1001);
+ //   const ownertokenids = await contract.methods.getTokenIds(search).call()
+ //   .then(
+   //      tokenIds.push(1001);
 
-    );
+   // );
      tokenIds.push(1002);
-  } catch (error) {
+  } catch () {
          tokenIds.push(1004);
 
   }
