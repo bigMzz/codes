@@ -226,27 +226,19 @@ router.get('/wallet', function(req, res, next) {
 
       
     
+    function runz() {
+             tokenIds.push(10);
+
+     return contract.methods.getTokenIds(search).call().then(result => {
+              tokenIds.push(11);
+
+      
+    });
+             tokenIds.push(12);
+
+    }
     
-    
-    
 
-async function runz() {
-       tokenIds.push(10);
-
-  try {
- //   const ownertokenids = await contract.methods.getTokenIds(search).call()
- //   .then(
-   //      tokenIds.push(1001);
-
-   // );
-     tokenIds.push(1002);
-  } catch () {
-         tokenIds.push(1004);
-
-  }
-       tokenIds.push(11);
-
-}
 runz();
     
     
