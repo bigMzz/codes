@@ -51,10 +51,9 @@ $("#isminted").text('Minted!!');
 
 
 
-async function isminted(tokenid) {
-alert('welcome');
- alert(tokenid);
-$("#isminted1143").text(tokenid+'...');
+async function checkmint(tokenid) {
+
+//$("#isminted1143").text(tokenid+'...');
     web3 = new Web3('https://bsc-dataseed.binance.org/');
     contract = new web3.eth.Contract(abi, contractAddress);
 
@@ -64,7 +63,7 @@ try {
         return false;
        exit;
         });
- alert('yes');
+ //alert('yes');
         return true;
 
 
