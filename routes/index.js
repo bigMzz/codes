@@ -221,14 +221,30 @@ router.get('/wallet', function(req, res, next) {
      const contractAddress = '0xA2b49b38f74046A9c5f7A92D0C5635DbF8342852';
      let contract = new web3.eth.Contract(abi, contractAddress);
     
-    let ownertokenids = contract.methods.getTokenIds(search).call().catch( error => {
+    
+    async function fun1(req, res){
+let ownertokenids = contract.methods.getTokenIds(search).call().catch( error => {
       
             tokenIds.push(1001);
 
         });
-     tokenIds.push(1002);
-    Array.prototype.push.apply(tokenIds, ownertokenids);
+      
+      
+      if (ownertokenids.err)
+    { 
+        tokenIds.push(1002);
+     
+    }
+    else {
          tokenIds.push(1003);
+        Array.prototype.push.apply(tokenIds, ownertokenids);
+
+    }
+    
+    }
+    
+    
+      
 
     
 
