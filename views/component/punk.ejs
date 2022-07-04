@@ -7,7 +7,7 @@ if (trait_normalization == 1) {
 <a href="/<%= item_path_name %>/<%= tokenItemUrl %>" style="text-decoration: none;">
   <div>
     <% if (punk.rarity_rank) { %>
-    <h3 class="punk-rank">Rank #<%= punk.rarity_rank %></h3>
+    <h3 class="punk-rank">Rank #<%= punk.rarity_rank %> <span id="isminted"><span></h3>
     <% } %>
     <% if (punk.similar) { %>
     <h3 class="punk-similar-score">Similar Score #<%= punk.similar.toFixed(2) %></h3>
@@ -23,3 +23,8 @@ if (trait_normalization == 1) {
     </div>
   </div>
 </a>
+<script>
+if (checkmint(<%=punk.id %>){
+$("#isminted").text(" ✔️");
+}
+</script>
