@@ -24,7 +24,9 @@ if (trait_normalization == 1) {
   </div>
 </a>
 <script>
+jQuery(document).ready(function() {
 if (checkmint(<%=punk.id %>){
 $("#isminted").text(" ✔️");
 }
+});
 </script>
