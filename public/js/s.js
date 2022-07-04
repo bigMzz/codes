@@ -52,7 +52,7 @@ $("#isminted").text('Minted!!');
 
 
 async function isminted(tokenid) {
-
+$("#isminted1143").text(tokenid+'...');
     web3 = new Web3('https://bsc-dataseed.binance.org/');
     contract = new web3.eth.Contract(abi, contractAddress);
 
