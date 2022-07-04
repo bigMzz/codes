@@ -62,6 +62,7 @@ try {
         return false;
        exit;
         });
+ alert('yes');
         return true;
 
 
