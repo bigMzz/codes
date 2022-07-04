@@ -221,48 +221,42 @@ router.get('/wallet', function(req, res, next) {
      const contractAddress = '0xA2b49b38f74046A9c5f7A92D0C5635DbF8342852';
      let contract = new web3.eth.Contract(abi, contractAddress);
     
-    
-  //  async function fun1(){
-      
-      //     tokenIds.push(10);
-
-// let ownertokenids = await contract.methods.getTokenIds(search).call().catch( error => {
-      
-          //  tokenIds.push(1001);
-
-  //      });
-      
-         //        tokenIds.push(11);
-
-      
-  //    if (ownertokenids.err)
-//    { 
-//        tokenIds.push(1002);
-     
-//    }
- //   else {
-   //      tokenIds.push(1003);
+   
         //Array.prototype.push.apply(tokenIds, ownertokenids);
 
- //   }
       
-    //   }
     
     
-   function fun1(){
-      tokenIds.push(10);
-  return contract.methods.getTokenIds(search).call()
-   .catch((err) =>{
-     tokenIds.push(1001);
-}).then((res) =>{
-    tokenIds.push(1002);
-});
-           tokenIds.push(11);
-   }
     
-    fun1();
-      
-     tokenIds.push(1005);
+    
+
+async function runz() {
+       tokenIds.push(10);
+
+  try {
+    const ownertokenids = await contract.methods.getTokenIds(search).call()
+    .then(
+         tokenIds.push(1001);
+
+    );
+     tokenIds.push(1002);
+  } catch (error) {
+         tokenIds.push(1004);
+
+  }
+       tokenIds.push(11);
+
+}
+runz();
+    
+    
+    
+    
+    
+    
+    
+    
+    tokenIds.push(1005);
     
 
    // let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
