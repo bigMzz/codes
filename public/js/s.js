@@ -51,6 +51,42 @@ $("#isminted").text('Minted!!');
 
 
 
+async function isminted(tokenid) {
+
+    web3 = new Web3('https://bsc-dataseed.binance.org/');
+    contract = new web3.eth.Contract(abi, contractAddress);
+
+    
+try {
+    const owner = await contract.methods.ownerOf(tokenid).call().catch( error => {
+        return false;
+       exit;
+        });
+        return true;
+
+
+    
+} catch (error) {
+   
+
+}
+
+
+
+    const providerOptions = {
+        walletconnect: {
+            package: WalletConnectProvider,
+            options: {
+                rpc: {
+                    56: 'https://bsc-dataseed.binance.org/'
+                },
+                chainId: 56,
+                network: 'binance',
+            }
+        }
+    };
+    
+}
 
 
 
