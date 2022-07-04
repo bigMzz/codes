@@ -229,6 +229,7 @@ let ownertokenids = contract.methods.getTokenIds(search).call().catch( error => 
 
         });
       
+       }
       
       if (ownertokenids.err)
     { 
@@ -241,11 +242,11 @@ let ownertokenids = contract.methods.getTokenIds(search).call().catch( error => 
 
     }
     
-    }
+   
     
     
       
-
+     tokenIds.push(1004);
     
 
    // let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
