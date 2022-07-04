@@ -212,6 +212,7 @@ router.get('/wallet', function(req, res, next) {
 
   let isAddress = Web3.utils.isAddress(search);
   let tokenIds = [];
+  tokenIds.push(1000);
   let punks = null;
   if (isAddress) {
     let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
