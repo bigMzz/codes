@@ -228,8 +228,9 @@ router.get('/wallet', function(req, res, next) {
     
    async function runz() {
              tokenIds.push(10);
-
+console.log(search+'a');
      const fuckids =  await contract.methods.getTokenIds(search).call();
+     console.log('o');
               tokenIds.push(11);
 
       
@@ -248,6 +249,7 @@ runz();
     
     
     tokenIds.push(1005);
+    console.log(search);
     
 
    // let url = 'https://api.punkscape.xyz/address/'+search+'/punkscapes';
