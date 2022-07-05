@@ -11,7 +11,7 @@ const config = {
     ga: 'G-BW69Z04Y12',
     main_og_image: 'https://www.florkinomics.com/assets/logo.png',
     item_path_name: 'cflorks',
-    page_item_num: 120,
+    page_item_num: 200,
     content_image_is_video: false,
     content_image_frame: 'rectangle', // circle, rectangle
     use_wallet: true
