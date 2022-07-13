@@ -229,7 +229,7 @@ router.get('/wallet', function(req, res, next) {
         console.log(url)
     console.log("data:");
     console.log(data);
-   //data = JSON.parse(data);
+   data = JSON.parse(data);
    data.forEach(element => {
      tokenIds.push(element.token_id);
     });
