@@ -80,7 +80,9 @@ body {
 /*
  * Header
  */
-
+header{
+ padding-bottom:4em;
+}
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: 700;
