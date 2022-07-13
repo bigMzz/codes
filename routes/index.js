@@ -229,10 +229,10 @@ router.get('/wallet', function(req, res, next) {
         console.log(url)
     console.log("data:");
     console.log(data);
-   data = JSON.parse(data);
-   data.forEach(element => {
-     tokenIds.push(element.token_id);
-    });
+  // data = JSON.parse(data);
+ //  data.forEach(element => {
+  //   tokenIds.push(element.token_id);
+//    });
     if (tokenIds.length > 0) {
       let punksQuery = 'SELECT punks.*, '+scoreTable+'.rarity_rank FROM punks INNER JOIN '+scoreTable+' ON (punks.id = '+scoreTable+'.punk_id) WHERE punks.id IN ('+tokenIds.join(',')+') ORDER BY '+scoreTable+'.rarity_rank ASC';
       punks = db.prepare(punksQuery).all();
