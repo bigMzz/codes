@@ -209,7 +209,7 @@ router.get('/wallet', function(req, res, next) {
   } else {
     useTraitNormalization = '0';
   }
-  console.log("hi:");
+ 
   let isAddress = Web3.utils.isAddress(search);
   let tokenIds = [];
   let punks = null;
@@ -226,9 +226,7 @@ router.get('/wallet', function(req, res, next) {
     let url = 'https://florkinomics.com/apis/getids.php?wid='+search;
    let result = request('GET', url);
     let data = result.getBody('utf8');
-        console.log(url);
-    console.log("data:");
-    console.log(data);
+     
     data = data.split(",");
     
     if(data.length){
